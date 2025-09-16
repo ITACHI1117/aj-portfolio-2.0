@@ -5,6 +5,7 @@ import Image from "next/image";
 import { HeroHeader } from "./header";
 import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 import { ProgressiveBlur } from "@/components/motion-primitives/progressive-blur";
+import SocialSelector from "./smoothui/ui/SocialSelector";
 
 export default function HeroSection() {
   return (
@@ -23,8 +24,8 @@ export default function HeroSection() {
                   mobile applications, and SaaS platforms with 4 years of
                   crafting user-centered solutions
                 </p>
-
-                <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
+                <SocialSelector />
+                {/* <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
                   <Button asChild size="lg" className="px-5 text-base">
                     <Link href="#link">
                       <span className="text-nowrap">View My Work</span>
@@ -41,12 +42,12 @@ export default function HeroSection() {
                       <span className="text-nowrap">Let's Build Together</span>
                     </Link>
                   </Button>
-                </div>
+                </div> */}
               </div>
               <Image
-                className="-z-10 order-first ml-auto rounded-full w-full object-cover sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-96 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:mix-blend-lighten dark:invert-0"
+                className="-z-10 order-first ml-auto rounded-full w-full object-cover sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-56 lg:order-last lg:h-max lg:w-2xl lg:object-contain dark:mix-blend-lighten dark:invert-0"
                 src="/Image.png"
-                alt="Abstract Object"
+                alt="My Image"
                 height="4000"
                 width="3000"
               />
