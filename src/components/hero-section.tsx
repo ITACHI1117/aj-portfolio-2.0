@@ -46,7 +46,7 @@ export default function HeroSection() {
               </div>
               <Image
                 className="-z-10 order-first ml-auto rounded-full w-full object-cover sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-56 lg:order-last lg:h-max lg:w-2xl lg:object-contain dark:mix-blend-lighten dark:invert-0"
-                src="/Image.PNG"
+                src="/images/Image.PNG"
                 alt="My Image"
                 height="4000"
                 width="3000"
