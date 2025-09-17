@@ -14,19 +14,9 @@ export const LogoCloud = () => {
               <div className="flex">
                 <img
                   className="mx-auto h-5 w-fit dark:invert"
-                  src="https://html.tailus.io/blocks/customers/nvidia.svg"
-                  alt="Nvidia Logo"
+                  src="https://html.tailus.io/blocks/customers/vercel.svg"
+                  alt="Vercel Logo"
                   height="20"
-                  width="auto"
-                />
-              </div>
-
-              <div className="flex">
-                <img
-                  className="mx-auto h-4 w-fit dark:invert"
-                  src="https://html.tailus.io/blocks/customers/column.svg"
-                  alt="Column Logo"
-                  height="16"
                   width="auto"
                 />
               </div>
@@ -39,6 +29,17 @@ export const LogoCloud = () => {
                   width="auto"
                 />
               </div>
+
+              <div className="flex">
+                <img
+                  className="mx-auto h-4 w-fit dark:invert"
+                  src="https://html.tailus.io/blocks/customers/tailwind.svg"
+                  alt="Tailwind Logo"
+                  height="16"
+                  width="auto"
+                />
+              </div>
+
               <div className="flex">
                 <img
                   className="mx-auto h-5 w-fit dark:invert"

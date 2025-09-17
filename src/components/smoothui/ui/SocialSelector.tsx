@@ -90,16 +90,16 @@ const defaultPlatforms: Platform[] = [
     url: "https://x.com/AJ_ITACHI",
   },
   {
-    name: "Bluesky",
-    domain: "bsky.app",
+    name: "Whatsapp",
+    domain: "whatsapp.com",
     icon: <WhatsAppIcon className="h-6 w-6" />,
-    url: "https://bsky.app/profile/educalvolpz.bsky.social",
+    url: "https://wa.me/+2348146821934",
   },
   {
-    name: "Threads",
-    domain: "threads.net",
+    name: "Gmail",
+    domain: "mail.google.com",
     icon: <GmailIcon className="h-5 w-5" />,
-    url: "https://threads.net/@educalvolpz",
+    url: "goabdev@gmail.com",
   },
 ];
 
@@ -165,8 +165,14 @@ export default function SocialSelector({
             />
           </div>
         </div>
-        <p className="text-foreground text-md">
-          Updates on{" "}
+        <motion.p
+          initial={{ opacity: 0, y: 10, filter: "blur(5px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          exit={{ opacity: 0, y: -10, filter: "blur(5px)" }}
+          transition={{ duration: 0.3 }}
+          className="text-foreground text-md"
+        >
+          {selectedPlatform.name == "X" ? `Updates on ` : `Get In Touch `}
           <span className="text-foreground font-medium">
             <motion.a
               key={selectedPlatform.domain}
@@ -183,14 +189,22 @@ export default function SocialSelector({
           </span>
           <br />
           <a
-            href={selectedPlatform.url}
+            href={
+              selectedPlatform.name == "Gmail"
+                ? `mailto:${selectedPlatform.url}`
+                : selectedPlatform.url
+            }
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary font-medium"
           >
-            @{handle}
+            {selectedPlatform.name == "X"
+              ? `@${handle}`
+              : selectedPlatform.name == "Whatsapp"
+              ? `+2348146821934`
+              : `goabdev@gmail.com`}
           </a>
-        </p>
+        </motion.p>
       </div>
     </div>
   );
