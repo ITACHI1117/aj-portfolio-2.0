@@ -18,6 +18,30 @@ export const XIcon: React.FC<XIconProps> = ({ className, ...props }) => (
   </svg>
 );
 
+// WhatsApp Icon Component
+export const WhatsAppIcon: React.FC<XIconProps> = ({ className, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+    className={className}
+    {...props}
+  >
+    <path d="M260.062 32C138.605 32 40.134 129.701 40.134 250.232c0 41.23 11.532 79.79 31.559 112.687L32 480l121.764-38.682c31.508 17.285 67.745 27.146 106.298 27.146C381.535 468.464 480 370.749 480 250.232S381.535 32 260.062 32zm148.97 316.898c-6.539 18.409-32.463 34.971-53.104 39.532-13.402 2.967-30.924 5.303-89.821-19.036-63.552-26.253-105.486-90.519-108.664-94.659-3.187-4.14-25.947-34.406-25.947-65.639 0-31.232 16.405-46.601 22.215-53.054 5.81-6.453 12.662-8.077 16.883-8.077 4.221 0 8.441.195 12.145.374 3.896.18 9.125-.148 14.29 10.914 5.348 11.408 18.287 44.628 19.928 47.88 1.64 3.253 2.734 7.012 0.547 11.34-2.186 4.327-3.253 7.012-6.44 10.914-3.187 3.902-6.683 8.718-9.543 11.677-3.187 3.253-6.51 6.756-2.798 13.208 3.711 6.453 16.499 27.253 35.441 44.12 24.404 21.707 44.988 28.427 51.428 31.679 6.44 3.253 10.195 2.734 13.929-1.64 3.735-4.374 15.984-18.287 20.206-24.541 4.221-6.253 8.441-5.217 14.251-3.124 5.81 2.094 36.784 17.348 43.224 20.518 6.44 3.169 10.66 4.764 12.301 7.394 1.64 2.631 1.64 15.226-4.898 33.635z" />
+  </svg>
+);
+
+// Gmail Icon Component
+export const GmailIcon: React.FC<XIconProps> = ({ className, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+    className={className}
+    {...props}
+  >
+    <path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+  </svg>
+);
+
 interface ThreadsIconProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
 }
@@ -63,18 +87,18 @@ const defaultPlatforms: Platform[] = [
     name: "X",
     domain: "x.com",
     icon: <XIcon className="h-5 w-5" />,
-    url: "https://x.com/educalvolpz",
+    url: "https://x.com/AJ_ITACHI",
   },
   {
     name: "Bluesky",
     domain: "bsky.app",
-    icon: <BskyIcon className="h-5 w-5" />,
+    icon: <WhatsAppIcon className="h-6 w-6" />,
     url: "https://bsky.app/profile/educalvolpz.bsky.social",
   },
   {
     name: "Threads",
     domain: "threads.net",
-    icon: <ThreadsIcon className="h-5 w-5" />,
+    icon: <GmailIcon className="h-5 w-5" />,
     url: "https://threads.net/@educalvolpz",
   },
 ];

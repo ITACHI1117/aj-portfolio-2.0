@@ -1,12 +1,19 @@
-import { Cpu, Lock, Sparkles, Zap } from "lucide-react";
+import {
+  Cpu,
+  Lock,
+  Rocket,
+  Sparkles,
+  TabletSmartphone,
+  Zap,
+} from "lucide-react";
 
 export default function ContentSection() {
   return (
     <section className="py-16 md:py-32">
       <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
         <div className="mx-auto max-w-2xl space-y-6 text-center md:space-y-12">
-          <h2 className="text-balance text-4xl font-medium lg:text-5xl">
-            About Me{" "}
+          <h2 className="text-balance text-4xl font-bold lg:text-5xl text-primary">
+            About Me
           </h2>
           <p>
             What started as a curiosity about building computers evolved into a
@@ -32,8 +39,10 @@ export default function ContentSection() {
         <div className="relative mx-auto grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4">
           <div className="space-y-3">
             <div className="flex items-center gap-2">
-              <Zap className="size-4" />
-              <h3 className="text-sm font-medium">Problem-Solving Mindset</h3>
+              <Zap className="size-4 text-primary" />
+              <h3 className="text-sm font-bold text-primary">
+                Problem-Solving Mindset
+              </h3>
             </div>
             <p className="text-muted-foreground text-sm">
               Every project is a puzzle waiting to be solved elegantly.
@@ -41,8 +50,10 @@ export default function ContentSection() {
           </div>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <Cpu className="size-4" />
-              <h3 className="text-sm font-medium">User-First Approach</h3>
+              <TabletSmartphone className="size-4 text-primary" />
+              <h3 className="text-sm font-bold text-primary">
+                User-First Approach
+              </h3>
             </div>
             <p className="text-muted-foreground text-sm">
               Beautiful interfaces mean nothing if users can't navigate them
@@ -51,8 +62,10 @@ export default function ContentSection() {
           </div>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <Lock className="size-4" />
-              <h3 className="text-sm font-medium">Continuous Evolution</h3>
+              <Rocket className="size-4 text-primary" />
+              <h3 className="text-sm font-bold text-primary">
+                Continuous Evolution
+              </h3>
             </div>
             <p className="text-muted-foreground text-sm">
               Technology changes rapidly, and I thrive on staying ahead of the
@@ -61,9 +74,11 @@ export default function ContentSection() {
           </div>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <Sparkles className="size-4" />
+              <Sparkles className="size-4 text-primary" />
 
-              <h3 className="text-sm font-medium">Quality Craftsmanship</h3>
+              <h3 className="text-sm font-bold text-primary">
+                Quality Craftsmanship
+              </h3>
             </div>
             <p className="text-muted-foreground text-sm">
               Whether it's a SaaS platform or mobile app, I build with

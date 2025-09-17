@@ -1,16 +1,16 @@
 "use client";
 import Link from "next/link";
-import { Logo } from "@/components/logo";
+import { Logo, LogoIcon, LogoStroke } from "@/components/logo";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { cn } from "@/lib/utils";
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
   { name: "About", href: "#link" },
+  { name: "Projects", href: "#link" },
+  { name: "Services", href: "#link" },
+  { name: "Pricing", href: "#link" },
 ];
 
 export const HeroHeader = () => {
@@ -44,7 +44,9 @@ export const HeroHeader = () => {
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
-                <Logo />
+                <h1 className="text-primary font-bold text-xl font-Poppins">
+                  GOAB
+                </h1>
               </Link>
 
               <button
@@ -95,7 +97,7 @@ export const HeroHeader = () => {
                   className={cn(isScrolled && "lg:hidden")}
                 >
                   <Link href="#">
-                    <span>Login</span>
+                    <span>CV</span>
                   </Link>
                 </Button>
                 <Button
@@ -104,7 +106,7 @@ export const HeroHeader = () => {
                   className={cn(isScrolled && "lg:hidden")}
                 >
                   <Link href="#">
-                    <span>Sign Up</span>
+                    <span>Resume</span>
                   </Link>
                 </Button>
                 <Button
@@ -113,7 +115,7 @@ export const HeroHeader = () => {
                   className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
                 >
                   <Link href="#">
-                    <span>Get Started</span>
+                    <span>Resume</span>
                   </Link>
                 </Button>
               </div>

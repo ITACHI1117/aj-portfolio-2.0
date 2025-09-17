@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronRight, ExternalLink } from "lucide-react";
@@ -11,16 +12,18 @@ import {
   MediaWiki,
   GooglePaLM,
 } from "@/components/logos";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Projects = [
   {
     id: "cosmic-forge-v1",
-    title: "Cosmic Forge v1.0",
+    title: "Cosmic Forge HealthNet",
     description:
-      "The first iteration of our healthcare platform featuring a clean, minimalist design with essential patient management features.",
-    image: "/api/placeholder/300/200",
-    technologies: ["React", "Node.js", "PostgreSQL"],
-    liveUrl: "https://cosmic-forge-v1.demo.com",
+      "A comprehensive healthcare management platform designed for healthcare providers. This appears to be your flagship enterprise-level project, showcasing your ability to build production-ready applications for the healthcare industry. The platform likely includes patient management, appointment scheduling, and provider tools.",
+    image: "/images/CosmicForgePage.png",
+    technologies: ["Next Js", "TypeScript", "Node.js"],
+    liveUrl: "https://www.cosmicforge-healthnet.com/",
     githubUrl: "https://github.com/username/cosmic-forge-v1",
     features: [
       "Basic appointment scheduling",
@@ -30,13 +33,29 @@ const Projects = [
     ],
   },
   {
-    id: "cosmic-forge-v2",
-    title: "Cosmic Forge v2.0",
+    id: "academi-ai",
+    title: "AcademiAi",
     description:
-      "The first iteration of our healthcare platform featuring a clean, minimalist design with essential patient management features.",
-    image: "/api/placeholder/300/200",
-    technologies: ["React", "Node.js", "PostgreSQL"],
-    liveUrl: "https://cosmic-forge-v1.demo.com",
+      "An intelligent academic recommendation system that provides 'personalized program recommendations powered by AI.' The platform helps students ' make informed decisions about your academic future with tailored guidance that matches your interests, goals, and career ambitions.",
+    image: "/images/AcademiaiPage.png",
+    technologies: ["Next js", ".NET Framework", "Cloudinary"],
+    liveUrl: "https://academiai.vercel.app/",
+    githubUrl: "https://github.com/username/cosmic-forge-v1",
+    features: [
+      "Basic appointment scheduling",
+      "Patient record management",
+      "Provider dashboard",
+      "Simple reporting",
+    ],
+  },
+  {
+    id: "cloud-clip",
+    title: "Cloud Clip",
+    description:
+      "A modern short-form video platform designed for content creators and viewers. CloudClip provides an intuitive interface for users to upload, share, and discover engaging video content. The platform focuses on delivering a seamless social media experience similar to popular video-sharing applications",
+    image: "/images/ClipCloudPage.png",
+    technologies: ["Next js", "Typescript", ".NET Framework", "Cloudinary"],
+    liveUrl: "https://clipcloud-gamma.vercel.app/",
     githubUrl: "https://github.com/username/cosmic-forge-v1",
     features: [
       "Basic appointment scheduling",
@@ -61,7 +80,9 @@ export default function IntegrationsSection() {
 
           <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-2">
             {Projects.map((project) => (
-              <ProjectCard project={project} />
+              <>
+                <ProjectCard project={project} />
+              </>
             ))}
           </div>
         </div>
@@ -70,48 +91,65 @@ export default function IntegrationsSection() {
   );
 }
 
-const ProjectCard = ({ project }) => (
-  <div className="bg-transparent rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border ">
-    {/* Project Image */}
-    <div className="relative mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 h-48 border">
-      <div className="absolute inset-0 flex items-center justify-center">
+const ProjectCard = ({ project }) => {
+  const router = useRouter();
+  return (
+    <div className="bg-transparent rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border ">
+      {/* Project Image */}
+      <div className="relative mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 h-56 border">
+        <img
+          alt={project.title}
+          src={project.image}
+          width="100"
+          height="100"
+          className="w-full h-full object-cover"
+        />
+        {/* <div className="absolute inset-0 flex items-center justify-center">
         <div className="w-32 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg shadow-lg flex items-center justify-center">
           <span className="text-white font-bold text-lg">
             {project.title.split(" ")[0]}
           </span>
         </div>
+      </div> */}
+      </div>
+
+      {/* Project Info */}
+      <div className="mb-4">
+        <h3 className="text-xl font-bold text-gray-900 mb-2">
+          {project.title}
+        </h3>
+        <p className="text-gray-600 text-sm leading-relaxed mb-4">
+          {project.description}
+        </p>
+
+        {/* Technologies */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Action Buttons */}
+      <div className="flex space-x-3">
+        <Button
+          className="cursor-pointer"
+          onClick={() => router.push(project.liveUrl)}
+        >
+          Visit Site
+        </Button>
+        {/* <button className="flex items-center justify-center w-10 h-10 bg-black text-white rounded-full hover:bg-gray-800 transition-colors duration-200">
+          <ExternalLink size={16} />
+        </button> */}
       </div>
     </div>
-
-    {/* Project Info */}
-    <div className="mb-4">
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-      <p className="text-gray-600 text-sm leading-relaxed mb-4">
-        {project.description}
-      </p>
-
-      {/* Technologies */}
-      <div className="flex flex-wrap gap-2 mb-4">
-        {project.technologies.map((tech, index) => (
-          <span
-            key={index}
-            className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-    </div>
-
-    {/* Action Buttons */}
-    <div className="flex space-x-3">
-      <Button className="">Visit Site</Button>
-      <button className="flex items-center justify-center w-10 h-10 bg-black text-white rounded-full hover:bg-gray-800 transition-colors duration-200">
-        <ExternalLink size={16} />
-      </button>
-    </div>
-  </div>
-);
+  );
+};
 
 const IntegrationCard = ({
   title,
