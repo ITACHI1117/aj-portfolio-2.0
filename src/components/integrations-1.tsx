@@ -21,7 +21,7 @@ const Projects = [
     title: "Cosmic Forge HealthNet",
     description:
       "A comprehensive healthcare management platform designed for healthcare providers. This appears to be your flagship enterprise-level project, showcasing your ability to build production-ready applications for the healthcare industry. The platform likely includes patient management, appointment scheduling, and provider tools.",
-    image: "/images/CosmicForgePage.png",
+    image: "/images/CosmicForgePage.webp",
     technologies: ["Next Js", "TypeScript", "Node.js"],
     liveUrl: "https://www.cosmicforge-healthnet.com/",
     githubUrl: "https://github.com/username/cosmic-forge-v1",
@@ -37,7 +37,7 @@ const Projects = [
     title: "AcademiAi",
     description:
       "An intelligent academic recommendation system that provides 'personalized program recommendations powered by AI.' The platform helps students ' make informed decisions about your academic future with tailored guidance that matches your interests, goals, and career ambitions.",
-    image: "/images/AcademiaiPage.png",
+    image: "/images/AcademiaiPage.webp",
     technologies: ["Next js", ".NET Framework", "Cloudinary"],
     liveUrl: "https://academiai.vercel.app/",
     githubUrl: "https://github.com/username/cosmic-forge-v1",
@@ -53,7 +53,7 @@ const Projects = [
     title: "Cloud Clip",
     description:
       "A modern short-form video platform designed for content creators and viewers. CloudClip provides an intuitive interface for users to upload, share, and discover engaging video content. The platform focuses on delivering a seamless social media experience similar to popular video-sharing applications",
-    image: "/images/ClipCloudPage.png",
+    image: "/images/ClipCloudPage.webp",
     technologies: ["Next js", "Typescript", ".NET Framework", "Cloudinary"],
     liveUrl: "https://clipcloud-gamma.vercel.app/",
     githubUrl: "https://github.com/username/cosmic-forge-v1",
@@ -69,7 +69,7 @@ const Projects = [
     title: "720 Scores",
     description:
       "720Scores is a sports hub that delivers instant access to live match information, up-to-date news and insights, and interactive features like a squad builder. Users can filter by date, stay informed with predictions and lineups, and customize their experience through settings—all aimed at keeping fans connected to their favorite teams and competitions.",
-    image: "/images/720Scores.png",
+    image: "/images/720Scores.webp",
     technologies: ["HTML", "CSS", "Java Script", "Django"],
     liveUrl: "https://www.720scores.com/",
     githubUrl: "https://github.com/username/cosmic-forge-v1",
