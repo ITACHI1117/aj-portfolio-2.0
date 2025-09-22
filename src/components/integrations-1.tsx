@@ -64,11 +64,27 @@ const Projects = [
       "Simple reporting",
     ],
   },
+  {
+    id: "720-scores",
+    title: "720 Scores",
+    description:
+      "720Scores is a sports hub that delivers instant access to live match information, up-to-date news and insights, and interactive features like a squad builder. Users can filter by date, stay informed with predictions and lineups, and customize their experience through settings—all aimed at keeping fans connected to their favorite teams and competitions.",
+    image: "/images/720Scores.png",
+    technologies: ["HTML", "CSS", "Java Script", "Django"],
+    liveUrl: "https://www.720scores.com/",
+    githubUrl: "https://github.com/username/cosmic-forge-v1",
+    features: [
+      "Basic appointment scheduling",
+      "Patient record management",
+      "Provider dashboard",
+      "Simple reporting",
+    ],
+  },
 ];
 
 export default function IntegrationsSection() {
   return (
-    <section>
+    <section id="projects">
       <div className="py-32">
         <div className="mx-auto max-w-5xl px-6">
           <div className="text-center">

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
+import { GithubIcon, LinkedinIcon } from "lucide-react";
 
 interface XIconProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
@@ -87,7 +88,7 @@ const defaultPlatforms: Platform[] = [
     name: "X",
     domain: "x.com",
     icon: <XIcon className="h-5 w-5" />,
-    url: "https://x.com/AJ_ITACHI",
+    url: "https://x.com/AJ__ITACHI",
   },
   {
     name: "Whatsapp",
@@ -101,6 +102,18 @@ const defaultPlatforms: Platform[] = [
     icon: <GmailIcon className="h-5 w-5" />,
     url: "goabdev@gmail.com",
   },
+  {
+    name: "Github",
+    domain: "github.com",
+    icon: <GithubIcon className="h-5 w-5" />,
+    url: "https://github.com/ITACHI1117",
+  },
+  {
+    name: "LinkedIn",
+    domain: "linkedin.com",
+    icon: <LinkedinIcon className="h-5 w-5" />,
+    url: "https://ng.linkedin.com/in/joseph-ajogu-5434a4261",
+  },
 ];
 
 export interface SocialSelectorProps {
@@ -113,7 +126,7 @@ export interface SocialSelectorProps {
 
 export default function SocialSelector({
   platforms = defaultPlatforms,
-  handle = "educalvolpz",
+  handle = "AJ__ITACHI",
   selectedPlatform: controlledSelected,
   onChange,
   className = "",
@@ -139,7 +152,7 @@ export default function SocialSelector({
                 }}
                 className={`relative z-10 cursor-pointer rounded-full p-2 transition-colors ${
                   selectedPlatform.name === platform.name
-                    ? " bg-primary fill-primary-foreground"
+                    ? " bg-primary fill-primary-foreground text-primary-foreground"
                     : "fill-foreground"
                 }`}
                 aria-label={`Select ${platform.name} platform`}
@@ -202,6 +215,10 @@ export default function SocialSelector({
               ? `@${handle}`
               : selectedPlatform.name == "Whatsapp"
               ? `+2348146821934`
+              : selectedPlatform.name == "LinkedIn"
+              ? `Joseph Ajogu`
+              : selectedPlatform.name == "Github"
+              ? `ITACHI1117`
               : `goabdev@gmail.com`}
           </a>
         </motion.p>

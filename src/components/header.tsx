@@ -7,10 +7,10 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 const menuItems = [
-  { name: "About", href: "#link" },
-  { name: "Projects", href: "#link" },
-  { name: "Services", href: "#link" },
-  { name: "Pricing", href: "#link" },
+  { name: "About", href: "#about" },
+  { name: "Projects", href: "#projects" },
+  { name: "Services", href: "#services" },
+  // { name: "Pricing", href: "#link" },
 ];
 
 export const HeroHeader = () => {
@@ -24,6 +24,10 @@ export const HeroHeader = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // const handleLinkClick = () => {
+  //   menuState && setMenuState(false);
+  // }
   return (
     <header>
       <nav
@@ -96,16 +100,22 @@ export const HeroHeader = () => {
                   size="sm"
                   className={cn(isScrolled && "lg:hidden")}
                 >
-                  <Link href="#">
+                  <Link
+                    target="_blank"
+                    href="https://drive.google.com/file/d/1Pk2wXWk6uyR35EX_84vFu2p8clilaH80/view?usp=drive_link"
+                  >
                     <span>CV</span>
                   </Link>
                 </Button>
                 <Button
                   asChild
                   size="sm"
-                  className={cn(isScrolled && "lg:hidden")}
+                  className={cn(isScrolled && "hidden")}
                 >
-                  <Link href="#">
+                  <Link
+                    target="_blank"
+                    href="https://drive.google.com/file/d/133FW4ERAmYxrZb-Wul6AFzpN_Ka_vV2r/view?usp=drive_link"
+                  >
                     <span>Resume</span>
                   </Link>
                 </Button>
@@ -114,7 +124,10 @@ export const HeroHeader = () => {
                   size="sm"
                   className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
                 >
-                  <Link href="#">
+                  <Link
+                    target="_blank"
+                    href="https://drive.google.com/file/d/133FW4ERAmYxrZb-Wul6AFzpN_Ka_vV2r/view?usp=drive_link"
+                  >
                     <span>Resume</span>
                   </Link>
                 </Button>
